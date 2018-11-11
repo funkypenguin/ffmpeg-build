@@ -88,7 +88,8 @@ installNvidiaSDK() {
     git pull
     make
     make install PREFIX="$DEST_DIR"
-    patch -d "$DEST_DIR" -p1 < "$(dirname "$0")/dynlink_cuda.h.patch"
+    # Seems to be applied upstream already
+    # patch -d "$DEST_DIR" -p1 < "$(dirname "$0")/dynlink_cuda.h.patch"
 }
 
 compileNasm() {
